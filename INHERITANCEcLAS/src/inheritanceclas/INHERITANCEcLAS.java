@@ -35,7 +35,7 @@ public class INHERITANCEcLAS {
         int choice=1;
          String name= "";
         char position;
-        do{ 
+        do{ /////////      master commit
             if(choice==0){
                 System.exit(0);
             }else{
