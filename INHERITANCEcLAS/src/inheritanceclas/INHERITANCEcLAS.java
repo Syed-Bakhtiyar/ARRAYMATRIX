@@ -16,9 +16,8 @@ public class INHERITANCEcLAS {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        INHERITFROM[] A;
-        
-        A = new INHERITFROM[10];
+        INHERITFROM[] A= new INHERITFROM[10];
+       
         for(int i=0;i<A.length;i++){
         A[i]=   new INHERITFROM();
         }
