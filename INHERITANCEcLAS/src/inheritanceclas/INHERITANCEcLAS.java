@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package inheritanceclas;
+import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.lang.*;
-import jdk.nashorn.internal.runtime.Undefined;
+import javax.swing.JOptionPane;
 //import java.io.BufferedWriter;
 /**
  *
@@ -24,10 +24,6 @@ public class INHERITANCEcLAS {
         for(int i=0;i<A.length;i++){
         A[i]=   new INHERITFROM();
         }
-        
-        
-        
-        
         int age;
         int count =1;
         double salary;
@@ -35,7 +31,9 @@ public class INHERITANCEcLAS {
         int choice=1;
          String name= "";
         char position;
+        
         do{ /////////      master commit
+            try{
             if(choice==0){
                 System.exit(0);
             }else{
@@ -84,8 +82,17 @@ public class INHERITANCEcLAS {
             System.out.print("\n\n if you wan't to exit press 0 and enter: ");
             choice=input.nextInt();
             }
+        }
+        catch(InputMismatchException a){
+        System.out.println("error ");
+        JOptionPane.showMessageDialog(null, "enter correct");
+//System.err.println(a);
+        }
         }while(i<A.length);
-        System.out.println("ENTERY IS FULL: ");
-    }
-    
+        
+        
+        if(i>9){
+        System.out.println("ENTRY IS FULL: ");
+        }
+        }
 }
