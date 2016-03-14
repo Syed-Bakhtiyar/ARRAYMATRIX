@@ -28,9 +28,9 @@ public void delt(){
 }
 public void search(int x){
     int c=0;
-    for(int i=0;i<count;i++){
+    for(int i=0;i<=count;i++){
         if(x==data[i]){
-        System.out.println("number is found");
+        System.out.printf("number is found in index [%d]\n",i);
         c++;
        }
     }
@@ -56,7 +56,7 @@ public void sortingDisplay(){
     }
     System.out.println("\t\tsorting data is");
     for(i=0;i<=count;i++){
-    System.out.println(arr[i]);
+    System.out.println("\t"+arr[i]);
     }
     
 }
@@ -68,9 +68,4 @@ public void display(){
     System.out.println();
     
 }
-
-   
-
-
-
 }
