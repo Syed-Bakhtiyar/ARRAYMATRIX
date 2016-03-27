@@ -23,5 +23,4 @@ public class INHERIT {
     public double getsalary(){
     return this.salary;
     }
-    
 }
