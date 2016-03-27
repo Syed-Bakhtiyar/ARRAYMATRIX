@@ -36,7 +36,7 @@ public class StackTest {
                     ins = input.nextInt();
                     cpy.insert(ins);
                     }catch(InputMismatchException a){
-                        //JOptionPane.showMessageDialog(null, "enter only number "+ a);
+                       JOptionPane.showMessageDialog(null, "enter only number "+ a);
                         //System.err.println(a);
                         System.out.println("enter only number");
                     }
