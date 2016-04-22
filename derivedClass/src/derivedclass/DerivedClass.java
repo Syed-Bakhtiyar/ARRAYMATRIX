@@ -3,22 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package inttochar;
-import java .util.Scanner;
+package derivedclass;
+import java.util.Scanner;
 /**
  *
  * @author bakhtiyar
  */
-public class IntToChar {
+public class DerivedClass {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        String name1;
         Scanner input = new Scanner(System.in);
-        System.out.print("ENTER NUMBER TO FIND ASCII: ");
-        int a = input.nextInt();
-        System.out.printf("%c\n",a);
+       // name1 = input.nextLine();
+        Method m = new Method();
+        m.inp();
+        System.out.println("\nhey buddy\n");
+        m.output();
     }
     
 }
