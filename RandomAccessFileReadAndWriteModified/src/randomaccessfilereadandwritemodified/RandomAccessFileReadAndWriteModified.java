@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package randomaccessfilereadandwritemodified;
 import java.util.Scanner;
 import java.io.*;
@@ -19,7 +14,7 @@ public class RandomAccessFileReadAndWriteModified {
         int var;
         int size = Integer.SIZE;
         do{
-            try( RandomAccessFile rand = new RandomAccessFile("D:\\BAKHTIYAR\\JavaFilingPractice\\record2.dat", "rw")){
+    try( RandomAccessFile rand = new RandomAccessFile("D:\\BAKHTIYAR\\JavaFilingPractice\\record3.dat", "rw")){
           //   rand.setLength(0);
             rand.seek(0);
             rand.writeInt(0000);
@@ -60,11 +55,9 @@ public class RandomAccessFileReadAndWriteModified {
                        
                         
                             
-                      // if((rand.getFilePointer())==4){
-                      //      rand.seek(0);
-                     //  }else{
+                      
                         rand.seek((rand.getFilePointer()-8));
-                     //  }
+                     
                         System.out.println("current position is: "+ rand.readInt());
                         System.out.print("Enter new data to modify: ");
                         modi = input.nextInt();
@@ -81,7 +74,7 @@ public class RandomAccessFileReadAndWriteModified {
                 case 4:
                     System.out.print("Enter a data (number) to delete: ");
                     int temp = input.nextInt();
-                    RandomAccessFile tempo = new RandomAccessFile("D:\\BAKHTIYAR\\JavaFilingPractice\\temp.dat", "rw");
+            RandomAccessFile tempo = new RandomAccessFile("D:\\BAKHTIYAR\\JavaFilingPractice\\temp.dat", "rw");
                     rand.seek(0);
                     tempo.seek(0);
                     try{
@@ -94,12 +87,12 @@ public class RandomAccessFileReadAndWriteModified {
                     catch(Exception ex){
                     tempo.close();
                     rand.close();
-                    File f = new File("D:\\BAKHTIYAR\\JavaFilingPractice\\record2.dat");
+                    File f = new File("D:\\BAKHTIYAR\\JavaFilingPractice\\record3.dat");
                     if(f.exists())
                     f.delete();
                     File t = new File("D:\\BAKHTIYAR\\JavaFilingPractice\\temp.dat");
                     if(t.exists())
-                    t.renameTo(new File("D:\\BAKHTIYAR\\JavaFilingPractice\\record2.dat"));
+                    t.renameTo(new File("D:\\BAKHTIYAR\\JavaFilingPractice\\record3.dat"));
                     }
                     
                     break;
